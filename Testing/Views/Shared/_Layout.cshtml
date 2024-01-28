@@ -27,10 +27,20 @@
             color: darkgoldenrod;
             background: white;
         }
-        h1{
+        h1 {
             background: white;
             color:goldenrod;
-            text-align: center;
+            position: relative;
+            font-size: 400%;
+            
+        }
+
+        #moveWord {
+            position: relative;
+        }
+        #zoom-picture {
+            transition: transform 0.5s ease-in-out;
+            
         }
         h2 {
             background: white;
@@ -81,5 +91,7 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
+
+   
 </body>
 </html>

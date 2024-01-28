@@ -3,6 +3,54 @@
 }
 
 <body class="text-center">
-    <h1 class="display-4">Welcome</h1>
+    <h1 id="moveWord">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <!-- adding my linkedin link to this web page -->
+    <p>Learn about the developer <a href="https://www.linkedin.com/in/conscience-o-nosa/">Linkedin.com</a></p>
+
+    <!--Adding an image to my homescreen-->
+    <a> <img id ="picture"src=https://blog.hubspot.com/hs-fs/hubfs/how-to-start-coding-1.jpg?width height="300" width="400" alt="Description of the image"> </a>
+    <script>
+        // adding a JS to make the welcome in the home page move.
+        var position = 0;
+        var positionTwo = 0
+        var word = document.getElementById("moveWord"); 
+        
+
+        function moveWord() {
+            position += 1; //adjusting the size
+            word.style.left = position + 'px';
+
+            
+            //reseting the position when it reach the screen end.
+            if (position >= 15) {
+                position = positionTwo;
+            }
+
+            function moveWordRight() {
+                positionTwo == position; // adjusting size to left
+                word.style.right = positionTwo + "px";
+            }
+
+            requestAnimationFrame(moveWord);
+        }
+        moveWord(); //starting the animation.
+
+        //coding to make my home screen image zoom in and out.
+        const moveWordElement = document.getElementById('picture');
+
+        function zoomIn() {
+            moveWordElement.style.transform = 'scale(0.8)';
+        }
+
+        function zoomOut() {
+            moveWordElement.style.transform = 'scale(1)';
+        }
+
+        // Example: Zoom in after 2 seconds, then zoom out after 4 seconds
+        setTimeout(zoomIn, 2000);
+        setTimeout(zoomOut, 4000);
+    </script>
+    
 </body>
