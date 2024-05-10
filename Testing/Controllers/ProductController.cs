@@ -43,7 +43,7 @@ namespace Testing.Controllers
             return RedirectToAction("ViewProduct", new { id = product.ProductID });
         }
 
-        public IActionResult InsertProduct()
+        public IActionResult InsertProductToDatabase()
         {
             var prod = repo.AssignCategory();
             return View(prod);
